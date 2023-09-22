@@ -1,0 +1,24 @@
+ext {
+    project(':core') {
+        archivesBaseName = "dyson-core"
+        dependencies {
+            implementation libs.apacheCommonLang
+            implementation libs.jakartaAnnotationApi
+            implementation libs.jakartaPersistenceApi
+            implementation libs.jakartaValidationApi
+            implementation libs.axonModelling
+            implementation libs.springStarter
+            implementation libs.springStarterJson
+            implementation libs.springStarterWeb
+            implementation libs.springSecurityCore
+            implementation libs.springAop
+            implementation libs.springValidation
+            implementation libs.springJpa
+            implementation libs.hibernateCore
+            implementation libs.grpcProtobuf
+            implementation libs.springOAuth2ResourceServer
+            annotationProcessor libs.lombok
+            compileOnly libs.lombok
+        }
+    }
+}

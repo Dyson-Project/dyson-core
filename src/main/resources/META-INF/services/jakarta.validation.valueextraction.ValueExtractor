@@ -1,0 +1,5 @@
+org.dyson.domain.type.extractor.EmailExtractor
+org.dyson.domain.type.extractor.TaxCodeExtractor
+org.dyson.domain.type.extractor.PhoneNumberExtractor
+org.dyson.domain.type.extractor.FullnameExtractor
+org.dyson.domain.type.extractor.ManualCodeExtractor
