@@ -42,3 +42,5 @@ pipeline.gdsl
 **/resources/mock/**
 **/node_modules/**
 **/venv/**
+# Ignore Gradle build output directory
+build

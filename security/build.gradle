@@ -1,0 +1,70 @@
+//buildscript {
+//    apply from: "$rootDir/gradle/dependencies.gradle"
+//}
+//plugins {
+//    id 'java-library'
+//    id 'maven-publish'
+//    id 'io.spring.dependency-management' version '1.1.3'
+//}
+//repositories {
+//    mavenCentral()
+//    maven { url 'https://repo.spring.io/milestone' }
+//    maven { url 'https://repo.spring.io/snapshot' }
+//}
+//
+//version = "0.0.1-SNAPSHOT"
+//group = "org.dyson"
+//configurations {
+//    compileOnly {
+//        extendsFrom annotationProcessor
+//    }
+//}
+//dependencies {
+//    compileOnly libs.jakartaServletApi
+//    implementation libs.springSecurityOauth2Jose
+//
+//    implementation libs.jakartaPersistenceApi
+//    implementation libs.jakartaValidationApi
+//    implementation libs.jakartaAnnotationApi
+//    implementation libs.apacheCommonLang
+//
+//    implementation project(":core")
+//
+//    annotationProcessor libs.lombok
+//    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.2'
+//}
+//dependencyManagement {
+//    imports {
+//        mavenBom "org.springframework.boot:spring-boot-dependencies:$versions.springBootVersion"
+//        mavenBom "org.axonframework:axon-bom:$versions.axonVersion"
+//    }
+//}
+//
+//tasks.named('test') {
+//    useJUnitPlatform()
+//}
+//
+//tasks.named("jar") {
+//    manifest {
+//        attributes('Implementation-Title': project.name,
+//                'Implementation-Version': project.version)
+//    }
+//}
+//java {
+//    withSourcesJar()
+//    withJavadocJar()
+//}
+//publishing {
+//    publications {
+//        library(MavenPublication) {
+//            from components.java
+//        }
+//    }
+//    repositories {
+//        maven {
+//            name = "reposilite"
+//            credentials(PasswordCredentials)
+//            url = "https://reposilite.tiktzuki.com/snapshots/"
+//        }
+//    }
+//}
