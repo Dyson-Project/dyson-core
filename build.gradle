@@ -43,6 +43,7 @@ subprojects {
                 name = "reposilite"
                 url = mavenUrl
                 credentials(PasswordCredentials)
+                allowInsecureProtocol = true
             }
         }
         publications {
