@@ -6,11 +6,7 @@ plugins {
     id 'maven-publish'
     id 'io.spring.dependency-management' version '1.1.4'
 }
-//ext {
-//    mavenUrl = project.hasProperty('mavenUrl') ? project.mavenUrl : ''
-//    mavenUsername = project.hasProperty('mavenUsername') ? project.mavenUsername : ''
-//    mavenPassword = project.hasProperty('mavenPassword') ? project.mavenPassword : ''
-//}
+
 allprojects {
     group = "org.dyson"
     version = "0.0.1"
