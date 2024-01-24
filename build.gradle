@@ -12,8 +12,6 @@ allprojects {
     version = "0.0.1"
     repositories {
         mavenCentral()
-        maven { url 'https://repo.spring.io/milestone' }
-        maven { url 'https://repo.spring.io/snapshot' }
     }
 }
 
@@ -39,7 +37,6 @@ subprojects {
                 name = "reposilite"
                 url = mavenUrl
                 credentials(PasswordCredentials)
-                allowInsecureProtocol = true
             }
         }
         publications {
