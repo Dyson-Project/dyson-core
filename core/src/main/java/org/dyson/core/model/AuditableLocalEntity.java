@@ -15,14 +15,14 @@ import java.time.Instant;
 @MappedSuperclass
 public abstract class AuditableLocalEntity<PK extends Serializable> extends LocalEntity<PK> implements Auditable {
     @CreatedBy
-    protected @Nullable String createdBy;
+    public @Nullable String createdBy;
 
-    protected @Nullable Instant createdDate;
+    public @Nullable Instant createdDate;
 
     @LastModifiedBy
-    protected @Nullable String lastModifiedBy;
+    public @Nullable String lastModifiedBy;
 
-    protected @Nullable Instant lastModifiedDate;
+    public @Nullable Instant lastModifiedDate;
 
     public void _created() {
         createdDate = Instant.now();

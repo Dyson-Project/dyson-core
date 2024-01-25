@@ -12,8 +12,8 @@ import java.time.Instant;
 @Setter
 @MappedSuperclass
 public abstract class AuditableView<PK extends Serializable> implements StandardType<PK> {
-    protected @Nullable String createdBy;
-    protected Instant createdDate;
-    protected @Nullable String lastModifiedBy;
-    protected Instant lastModifiedDate;
+    public @Nullable String createdBy;
+    public Instant createdDate;
+    public @Nullable String lastModifiedBy;
+    public Instant lastModifiedDate;
 }
