@@ -62,13 +62,13 @@ public abstract class ExtendedResponseEntityExceptionHandler extends ResponseEnt
 
     @Override
     protected ResponseEntity<Object> handleNoHandlerFoundException(@NotNull NoHandlerFoundException ex, @NotNull HttpHeaders headers, @NotNull HttpStatusCode status, @NotNull WebRequest request) {
-        return buildResponseEntity(BAD_REQUEST, ex);
+        return buildResponseEntityFromTemplate(BAD_REQUEST, ex);
     }
 
     @Deprecated
     public abstract ResponseEntity<Object> buildResponseEntity(RestError restError);
 
-    public ResponseEntity<Object> buildResponseEntity(HttpStatus status, Exception ex, String errorMessage) {
+    public ResponseEntity<Object> buildResponseEntity(HttpStatus status, Throwable ex, String errorMessage) {
         var errorCode = ex.getMessage();
         if (status.is5xxServerError())
             log.error(errorCode, ex);
@@ -77,7 +77,7 @@ public abstract class ExtendedResponseEntityExceptionHandler extends ResponseEnt
         return new ResponseEntity<>(new RestError(status, errorCode, errorMessage, ex), status);
     }
 
-    public ResponseEntity<Object> buildResponseEntity(HttpStatus status, Exception ex, @Nullable Object... attrs) {
+    public ResponseEntity<Object> buildResponseEntityFromTemplate(HttpStatus status, Throwable ex, @Nullable Object... attrs) {
         return buildResponseEntity(status, ex, getErrorMessage(ex.getMessage(), attrs));
     }
 
