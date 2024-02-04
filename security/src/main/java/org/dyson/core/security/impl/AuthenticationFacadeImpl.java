@@ -1,6 +1,6 @@
-package org.dyson.core.aop.impl;
+package org.dyson.core.security.impl;
 
-import org.dyson.core.aop.AuthenticationFacade;
+import org.dyson.core.security.AuthenticationFacade;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 

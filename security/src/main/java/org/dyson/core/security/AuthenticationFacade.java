@@ -1,4 +1,4 @@
-package org.dyson.core.aop;
+package org.dyson.core.security;
 
 import jakarta.annotation.Nullable;
 import org.springframework.security.core.Authentication;

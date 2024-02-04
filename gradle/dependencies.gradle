@@ -1,7 +1,7 @@
 ext {
     versions = [
             apacheCommonLang        : "3.14.0",
-            axonVersion             : "4.8.0",
+            axonVersion             : "4.9.1",
             c3p0                    : "0.9.5.4",
             commonsCollections      : "4.4",
             grpcSpringStarterVersion: "2.14.0.RELEASE",
@@ -21,7 +21,7 @@ ext {
             redisson                : "3.23.0",
             specArgVersion          : "3.0.1",
             springBootVersion       : "3.2.1",
-            springCloudVersion      : "2022.0.2",
+            springCloudVersion      : "2023.0.0",
             temporalVersion         : "1.19.1",
             zxingVersion            : "3.5.1",
     ]
@@ -95,6 +95,7 @@ ext {
             springSecurityMessaging     : "org.springframework.security:spring-security-messaging",
             springSecurityOauth2Jose    : "org.springframework.security:spring-security-oauth2-jose",
             springSecurityTest          : "org.springframework.security:spring-security-test",
+            springAutoconfigure         : "org.springframework.boot:spring-boot-autoconfigure",
             springStarter               : "org.springframework.boot:spring-boot-starter",
             springStarterAmqp           : "org.springframework.boot:spring-boot-starter-amqp",
             springStarterCassandra      : "org.springframework.boot:spring-boot-starter-data-cassandra",

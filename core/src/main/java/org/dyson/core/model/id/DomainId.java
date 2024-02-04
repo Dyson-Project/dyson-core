@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import org.dyson.core.model.ValueObject;
 
 import java.io.Serializable;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -18,8 +19,12 @@ public abstract class DomainId implements ValueObject, Serializable {
         this.id = id;
     }
 
-    public static <T extends DomainId> T generateNewId(Class<T> clazz) throws Exception {
-        return clazz.getConstructor(UUID.class).newInstance(UUID.randomUUID());
+    public static <T extends DomainId> T generateNewId(Class<T> clazz) {
+        try {
+            return clazz.getConstructor(UUID.class).newInstance(UUID.randomUUID());
+        } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public UUID getId() {

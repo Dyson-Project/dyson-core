@@ -1,4 +1,4 @@
-package dyson.core.security;
+package org.dyson.core.security;
 
 import com.nimbusds.jose.shaded.gson.internal.LinkedTreeMap;
 import jakarta.servlet.http.HttpServletRequest;
